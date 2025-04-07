@@ -1,5 +1,4 @@
 module.exports = function(eleventyConfig) {
-  // 🔥 THIS is the line that matters
   eleventyConfig.addPassthroughCopy("admin");
 
   return {
