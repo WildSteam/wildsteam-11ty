@@ -1,0 +1,9 @@
+[build]
+  publish = "_site"
+  command = "npm run build"
+
+[[plugins]]
+  package = "@netlify/plugin-visual-editing"
+
+[build.environment]
+  NODE_VERSION = "18"
