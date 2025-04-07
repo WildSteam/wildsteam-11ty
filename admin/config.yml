@@ -6,13 +6,33 @@ media_folder: "uploads"
 public_folder: "/uploads"
 
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: "homepage"
+    label: "Homepage Content"
     files:
       - file: "pages/index.md"
         label: "Homepage"
-        name: "homepage"
+        name: "index"
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Hero Line", name: "hero", widget: "string" }
-          - { label: "Body Content", name: "body", widget: "markdown" }
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Hero Text", name: "hero", widget: "string" }
+          - { label: "Welcome Message", name: "body", widget: "markdown" }
+          - label: "Gallery"
+            name: "gallery"
+            widget: "list"
+            label_singular: "Image"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+          - label: "Call to Action"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Subtext", name: "subtext", widget: "string" }
+              - { label: "Button Text", name: "button", widget: "string" }
+              - { label: "Button Link", name: "link", widget: "string" }
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            fields:
+              - { label: "Quote", name: "quote", widget: "string" }
+              - { label: "Author", name: "author", widget: "string" }
